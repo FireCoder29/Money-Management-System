@@ -98,4 +98,67 @@ class Parent(Person):
             print(f" - Remaining Pocket Money: {self.pocket_money} Taka")
 
 parent = Parent("Parent", 50000)
-child = Child("Child") 
+child = Child("Child")
+
+while True:
+    print("\n--- Family Money Management System ---")
+    print("1. Add Parent's Expenses")
+    print("2. Show Parent's Current Balance")
+    print("3. Give Pocket Money to Child")
+    print("4. Child Spends Money")
+    print("5. Child Receives Extra Income")
+    print("6. Show Child's Current Balance")
+    print("7. Exit")
+
+    choice = input("Enter your choice (1-7): ")
+
+    if choice == "1":
+        category = input("Enter expense category (e.g., Food, Transport): ")
+
+        if not category:
+            print("Expense category cannot be empty.")
+            continue
+
+        if any (char.isdigit() for char in category):
+            print("Expense category cannot contain numbers.")
+            continue
+
+        try:
+            amount = float(input("Enter expense amount (Taka): "))
+            parent.add_expense(category, amount)
+        except ValueError:
+            print("Invalid input! Please enter a numeric value for amount.")
+        
+    elif choice == "2":
+        parent.show_balance()
+
+    elif choice == "3":
+        try:
+            amount = float(input("Enter pocket money amount to give (Taka): "))
+            parent.give_pocket_money(child, amount)
+        except ValueError:
+            print("Invalid input! Please enter a numeric value for amount.")
+
+    elif choice == "4":
+        try:
+            amount = float(input("Enter amount for child to spend (Taka): "))
+            child.spend_money(amount)
+        except ValueError:
+            print("Invalid input! Please enter a numeric value for amount.")
+
+    elif choice == "5":
+        try:
+            amount = float(input("Enter extra income amount for child (Taka): "))
+            child.receive_extra_income(amount)
+        except ValueError:
+            print("Invalid input! Please enter a numeric value for amount.")
+
+    elif choice == "6":
+        child.show_balance()
+
+    elif choice == "7":
+        print("Exiting the Family Money Management System. Goodbye!")
+        break
+
+    else:
+        print("Invalid! Please try again.")
