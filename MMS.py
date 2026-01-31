@@ -95,4 +95,7 @@ class Parent(Person):
             print(f"{self.name}'s Pocket Money Details:")
             print(f" - Total Received: {self.total_received} Taka")
             print(f" - Total Spent: {self.spent} Taka")
-            print(f" - Remaining Pocket Money: {self.pocket_money} Taka") 
+            print(f" - Remaining Pocket Money: {self.pocket_money} Taka")
+
+parent = Parent("Parent", 50000)
+child = Child("Child") 
