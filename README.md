@@ -72,5 +72,4 @@ The project is designed using Object-Oriented Programming (OOP) concepts.
 3. Run the file using the command:
 
 
-## Made by:
-FireCoder29
+## Made by: Md. Arham Ishtiyaque
