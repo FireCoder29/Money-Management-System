@@ -1,4 +1,4 @@
-# Family Money Management System
+# Family Money Management System - A Money Manager of Family
 
 This is a Python console-based project that simulates a family money management system.
 It helps manage a parent's salary, expenses, pocket money of child, and a child's spending.
@@ -33,13 +33,13 @@ The project is designed using Object-Oriented Programming (OOP) concepts.
 - Base class that stores name and role.
 - Used by both Parent and Child classes.
 
-### Parent Class (inherits Person)
+### Parent Class (Inherits Person)
 - Stores salary and expense details.
 - Adds expenses with category and amount.
 - Gives pocket money to the child.
 - Displays expense history and remaining balance.
 
-### Child Class (inherits Person)
+### Child Class (Inherits Person)
 - Receives pocket money and extra income.
 - Spends pocket money.
 - Displays pocket money summary.
